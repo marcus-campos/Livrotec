@@ -1,0 +1,23 @@
+INSERT INTO tbl_editora VALUES ('','Done Liro','Acender',51423605000172,'www.acender.com','','acender@acender.com.br',26565698,22214569,33896120,'Rua Myrynt','Belo Horizonte','Anton Linbos',2500,'','MG');
+INSERT INTO tbl_editora VALUES ('','Parceiro Outorgante','Ibdc',41423605000172,'www.ibdc.com','','ibdc@ibdc.com.br',36565698,32214569,35896120,'Rua Wanter','Belo Horizonte','Padre Marcones',501,'','MG');
+INSERT INTO tbl_editora VALUES ('','Marecino','Alexio',11423605000172,'www.aleixo.com','','aleixo@aleixo.com.br',32365698,32214569,35892520,'Rua Burinis','Belo Horizonte','Caiçara',2151,'','MG');
+
+INSERT INTO tbl_cliente VALUES ('','Marcio Garcia Viana',403289440,86018301539,'1970-02-01','2011-01-01','M','','','','','','','marcio@hotmail.com',30720190,'Rua Maringa','Belo Horizonte','Padre Eustaquio',21,'APT501','MG',35648416,85279951);
+INSERT INTO tbl_cliente VALUES ('','Pedro Marcone Lino',103289440,26018301539,'1950-05-03','2011-01-01','M','','','','','','','pedro@hotmail.com',30720191,'Rua Mario Vernect','Belo Horizonte','Arlindo Viana',11,'APT201','MG',25648416,88279951);
+INSERT INTO tbl_cliente VALUES ('','Walter Wander Wilson Junior',303289440,22018301539,'1995-04-05','2011-01-02','M','','','','','','','walter@hotmail.com',30720180,'Rua Rener','Uberlandia','Santa Monica',121,'APT4101','MG',34648416,99279951);
+
+INSERT INTO tbl_idioma VALUES ('','Português');
+INSERT INTO tbl_idioma VALUES ('','Inglês');
+INSERT INTO tbl_idioma VALUES ('','Espanhol');
+
+INSERT INTO tbl_tipo_acervo VALUES ('','Revista','0');
+INSERT INTO tbl_tipo_acervo VALUES ('','Livro','5');
+INSERT INTO tbl_tipo_acervo VALUES ('','CD','7');
+
+INSERT INTO tbl_genero VALUES ('','Terror');
+INSERT INTO tbl_genero VALUES ('','Drama');
+INSERT INTO tbl_genero VALUES ('','Comédia/Romântica');
+
+INSERT INTO tbl_autor VALUES ('','Fernando Sabino');
+INSERT INTO tbl_autor VALUES ('','Luís Fernando Veríssimo');
+INSERT INTO tbl_autor VALUES ('','Otto Alencar');

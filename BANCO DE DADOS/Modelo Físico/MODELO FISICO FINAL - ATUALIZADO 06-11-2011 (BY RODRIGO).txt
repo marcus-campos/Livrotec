@@ -1,0 +1,138 @@
+create database livrotec;
+
+use livrotec;
+
+CREATE TABLE tbl_tipo_acervo (
+  cod_tipo_acervo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  tipo_acervo VARCHAR(200) NULL,
+  emprestimo INTEGER UNSIGNED NULL,
+  PRIMARY KEY(cod_tipo_acervo)
+);
+
+CREATE TABLE tbl_genero (
+  cod_genero INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  genero VARCHAR(200) NULL,
+  PRIMARY KEY(cod_genero)
+);
+
+CREATE TABLE tbl_idioma (
+  cod_idioma INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  idioma VARCHAR(200) NULL,
+  PRIMARY KEY(cod_idioma)
+);
+
+CREATE TABLE tbl_editora (
+  cod_editora INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  razao_social VARCHAR(255) NULL,
+  nome_fantasia VARCHAR(255) NULL,
+  cnpj varchar(20) NULL,
+  site VARCHAR(255) NULL,
+  contato TEXT NULL,
+  email VARCHAR(255) NULL,
+  telefone varchar(14) NULL,
+  fax varchar(14) NULL,
+  cep varchar(20) NULL,
+  logradouro VARCHAR(255) NULL,
+  cidade VARCHAR(255) NULL,
+  bairro VARCHAR(255) NULL,
+  numero TINYINT UNSIGNED NULL,
+  complemento VARCHAR(255) NULL,
+  uf CHAR(2) NULL,
+  PRIMARY KEY(cod_editora)
+);
+
+CREATE TABLE tbl_autor (
+  cod_autor INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  autor VARCHAR(200) NULL,
+  PRIMARY KEY(cod_autor)
+);
+
+CREATE TABLE tbl_usuario (
+  cod_usuario INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(200) NOT NULL,
+  login VARCHAR(255) NOT NULL,
+  senha TEXT NOT NULL,
+  tipo int NOT NULL,
+  cod_seguranca varchar(30) not null,
+  PRIMARY KEY(cod_usuario)
+);
+
+CREATE TABLE tbl_cliente (
+  cod_leitor INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  cliente VARCHAR(200) NOT NULL,
+  rg VARCHAR(20) NULL,
+  cpf varchar(20) NOT NULL,
+  dt_nascimento DATE NULL,
+  dt_cadastro DATE NOT NULL,
+  sexo CHAR(1) NOT NULL,
+  responsavel VARCHAR(200) NULL,
+  observacao TEXT NULL,
+  matricula INTEGER UNSIGNED NULL,
+  turma VARCHAR(10) NULL,
+  periodo CHAR(1) NULL,
+  multa REAL NULL,
+  email VARCHAR(255) NULL,
+  cep varchar(20) NULL,
+  logradouro VARCHAR(255) NULL,
+  cidade VARCHAR(255) NULL,
+  bairro VARCHAR(255) NULL,
+  numero TINYINT UNSIGNED NULL,
+  complemento VARCHAR(255) NULL,
+  uf CHAR(2) NULL,
+  telefone BIGINT UNSIGNED NULL,
+  celular BIGINT UNSIGNED NULL,
+  PRIMARY KEY(cod_leitor)
+);
+
+CREATE TABLE tbl_acervo (
+  cod_acervo BIGINT NOT NULL AUTO_INCREMENT,
+  tbl_autor_cod_autor INTEGER UNSIGNED NULL,
+  tbl_genero_cod_genero INTEGER UNSIGNED NULL,
+  tbl_tipo_acervo_cod_tipo_acervo INTEGER UNSIGNED NULL,
+  tbl_idioma_cod_idioma INTEGER UNSIGNED NULL,
+  tbl_editora_cod_editora INTEGER UNSIGNED NULL,
+  titulo VARCHAR(255) NOT NULL,
+  sub_titulo VARCHAR(255) NOT NULL,
+  data_aquisicao DATE NOT NULL,
+  exemplar VARCHAR(10) NOT NULL,
+  volume VARCHAR(20) NULL,
+  edicao VARCHAR(50) NULL,
+  observacoes TEXT NULL,
+  numero_paginas INTEGER UNSIGNED NULL,
+  preco REAL NULL,
+  cdd VARCHAR(35) NULL,
+  cdu VARCHAR(35) NULL,
+  cutter VARCHAR(35) NULL,
+  isbn VARCHAR(35) NULL,
+  status_acervo VARCHAR(20) NOT NULL,
+  referencia_bibliografica TEXT NULL,
+  resenha TEXT NULL,
+  periodicidade VARCHAR(100) NULL,
+  codigobarra VARCHAR(50) NULL,
+  PRIMARY KEY(cod_acervo),
+  FOREIGN KEY(tbl_editora_cod_editora)
+    REFERENCES tbl_editora(cod_editora),
+  FOREIGN KEY(tbl_idioma_cod_idioma)
+    REFERENCES tbl_idioma(cod_idioma),
+  FOREIGN KEY(tbl_tipo_acervo_cod_tipo_acervo)
+    REFERENCES tbl_tipo_acervo(cod_tipo_acervo),
+  FOREIGN KEY(tbl_genero_cod_genero)
+    REFERENCES tbl_genero(cod_genero),
+  FOREIGN KEY(tbl_autor_cod_autor)
+    REFERENCES tbl_autor(cod_autor)
+);
+
+CREATE TABLE tbl_emprestimo (
+  cod_emprestimo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  tbl_acervo_cod_acervo BIGINT NOT NULL,
+  tbl_cliente_cod_leitor INTEGER UNSIGNED NOT NULL,
+  data_aluguel DATE NULL,
+  data_devolucao DATE NULL,
+  data_prevista DATE NULL,
+  PRIMARY KEY(cod_emprestimo),
+  FOREIGN KEY(tbl_cliente_cod_leitor)
+    REFERENCES tbl_cliente(cod_leitor),
+  FOREIGN KEY(tbl_acervo_cod_acervo)
+    REFERENCES tbl_acervo(cod_acervo)
+);
+

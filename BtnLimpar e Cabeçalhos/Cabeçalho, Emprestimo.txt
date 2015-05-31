@@ -1,0 +1,5 @@
+            dg_emprestimos_pesquisa.Columns[0].HeaderText = "Código do Emprestimo";
+            dg_emprestimos_pesquisa.Columns[1].HeaderText = "Código do Acervo";
+            dg_emprestimos_pesquisa.Columns[2].HeaderText = "Código do Leitor";
+            dg_emprestimos_pesquisa.Columns[3].HeaderText = "Data do Aluguel";
+            dg_emprestimos_pesquisa.Columns[4].HeaderText = "Data da Devolução";

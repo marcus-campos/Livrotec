@@ -1,0 +1,66 @@
+             string autor = "SELECT autor FROM tbl_autor WHERE cod_autor = '"+dg_acervo_pesquisa.SelectedRows[0].Cells[1].Value.ToString()+"' ;";
+            MySqlDataAdapter Autoradapter = new MySqlDataAdapter(autor,objconexao);
+            DataSet Autordataset = new DataSet();
+            Autoradapter.Fill(Autordataset);
+            string nomeAutor = Autordataset.Tables[0].Rows[0]["autor"].ToString();
+
+
+            string editora = "SELECT nome_fantasia FROM tbl_editora  WHERE cod_editora = '"+dg_acervo_pesquisa.SelectedRows[0].Cells[5].Value.ToString()+"' ;";
+            MySqlDataAdapter Editoraadapter = new MySqlDataAdapter(editora,objconexao);
+            DataSet Editoradataset = new DataSet();
+            Editoraadapter.Fill(Editoradataset);
+            string nomeEditora = Editoradataset.Tables[0].Rows[0]["nome_fantasia"].ToString();
+
+
+            string genero = "SELECT genero FROM tbl_genero WHERE cod_genero = '"+dg_acervo_pesquisa.SelectedRows[0].Cells[2].Value.ToString()+"' ;";
+            MySqlDataAdapter Generoadapter = new MySqlDataAdapter(genero,objconexao);
+            DataSet Generodataset = new DataSet();
+            Generoadapter.Fill(Generodataset);
+            string nomeGenero = Generodataset.Tables[0].Rows[0]["genero"].ToString();
+
+
+            string tipoAcervo = "SELECT tipo_acervo FROM tbl_tipo_acervo WHERE cod_tipo_acervo = '"+dg_acervo_pesquisa.SelectedRows[0].Cells[3].Value.ToString()+"' ;";
+            MySqlDataAdapter Acervoadapter = new MySqlDataAdapter(tipoAcervo,objconexao);
+            DataSet Acervodataset = new DataSet();
+            Acervoadapter.Fill(Acervodataset);
+            string nomeAcervo = Acervodataset.Tables[0].Rows[0]["tipo_acervo"].ToString();
+
+
+            string idioma = "SELECT idioma FROM tbl_idioma WHERE cod_idioma = '"+dg_acervo_pesquisa.SelectedRows[0].Cells[4].Value.ToString()+"' ;";
+            MySqlDataAdapter Idiomaadapter = new MySqlDataAdapter(idioma,objconexao);
+            DataSet Idiomadataset = new DataSet();
+            Idiomaadapter.Fill(Idiomadataset);
+            string nomeIdioma = Idiomadataset.Tables[0].Rows[0]["idioma"].ToString();
+
+            tb_acervo_cdd.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[16].Value.ToString();
+            tb_acervo_cdu.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[17].Value.ToString();
+            tb_acervo_codBarra.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[24].Value.ToString();
+            tb_acervo_cutter.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[18].Value.ToString();
+            tb_acervo_edicao.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[11].Value.ToString();
+            tb_acervo_exemplar.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[9].Value.ToString();
+            tb_acervo_isbn.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[19].Value.ToString();
+            tb_acervo_numPaginas.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[14].Value.ToString();
+            tb_acervo_observacoes.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[13].Value.ToString();
+            tb_acervo_preco.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[15].Value.ToString();
+            tb_acervo_refBibliografica.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[21].Value.ToString();
+            tb_acervo_resenha.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[22].Value.ToString();
+            tb_acervo_subTitulo.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[7].Value.ToString();
+            tb_acervo_titulo.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[6].Value.ToString();
+            tb_acervo_volume.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[10].Value.ToString();
+            cb_acervo_autor.Text = nomeAutor;
+            cb_acervo_editora.Text = nomeEditora;
+            cb_acervo_genero.Text = nomeGenero;
+            cb_acervo_idioma.Text = nomeIdioma;
+            cb_acervo_periodicidade.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[23].Value.ToString();
+            cb_acervo_tipoDeAcervo.Text = nomeAcervo;
+            dtp_acervo_dataAquisicao.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[8].Value.ToString();
+            dtp_acervo_dataEdicao.Text = dg_acervo_pesquisa.SelectedRows[0].Cells[12].Value.ToString();
+
+            if( dg_acervo_pesquisa.SelectedRows[0].Cells[20].Value.ToString() == "Locado")
+            {
+                rb_acervo_locado.Checked = true;
+            }
+            if( dg_acervo_pesquisa.SelectedRows[0].Cells[20].Value.ToString() == "Disponivel")
+            {
+                rb_acervo_disponivel.Checked = true;
+            }

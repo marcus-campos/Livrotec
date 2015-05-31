@@ -1,0 +1,9 @@
+select tbl_editora tbl_editora.cod_editora,tbl_editora.razao_social,tbl_editora.nome_fantasia,tbl_editora.telefone,tbl_editora.fax
+FROM tbl_editora;
+
+
+select tbl_cliente tbl_cliente.cod_leitor,tbl_cliente.cliente,tbl_cliente.dt_nascimento,tbl_cliente.responsavel,tbl_cliente.multa,tbl_cliente.telefone,tbl_cliente.celular
+FROM tbl_cliente;
+
+
+select tbl_acervo tbl_acervo.cod_acervo, tbl_acervo.titulo, tbl_acervo.sub_titulo, tbl_acervo.exemplar, tbl_acervo.codigobarra, tbl_acervo.tbl_autor_cod_autor, tbl_acervo.tbl_genero_cod_genero, tbl_acervo.tbl_tipo_acervo_cod_tipo_acervo, tbl_acervo.tbl_idioma_cod_idioma, tbl_acervo.tbl_editora_cod_editora, tbl_acervo.status_acervo;

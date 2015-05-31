@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1D56683-4C1A-4C08-9BAC-C0FCD167BF82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sobre</RootNamespace>
+    <AssemblyName>LivroTEC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICO 128x128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BACKUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUP.Designer.cs">
+      <DependentUpon>BACKUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutenticarLogin.cs" />
+    <Compile Include="Config_BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config_BD.Designer.cs">
+      <DependentUpon>Config_BD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENCRIPTOGRAFAR_SENHAS.cs" />
+    <Compile Include="EX_CMD.cs" />
+    <Compile Include="novoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="novoUsuario.Designer.cs">
+      <DependentUpon>novoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarSenha.cs" />
+    <Compile Include="Recuperar_Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recuperar_Senha.Designer.cs">
+      <DependentUpon>Recuperar_Senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REVER_COD_SEGURANCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REVER_COD_SEGURANCA.Designer.cs">
+      <DependentUpon>REVER_COD_SEGURANCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaCadGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadGenero.Designer.cs">
+      <DependentUpon>telaCadGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaCadIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadIdioma.Designer.cs">
+      <DependentUpon>telaCadIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaCadTipoAcervo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadTipoAcervo.Designer.cs">
+      <DependentUpon>telaCadTipoAcervo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaCadEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadEditora.Designer.cs">
+      <DependentUpon>telaCadEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaCadAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadAutor.Designer.cs">
+      <DependentUpon>telaCadAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaLogin.Designer.cs">
+      <DependentUpon>telaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaPrincipal.Designer.cs">
+      <DependentUpon>telaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VERIFICA_USUARIOS.cs" />
+    <EmbeddedResource Include="BACKUP.resx">
+      <DependentUpon>BACKUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_BD.resx">
+      <DependentUpon>Config_BD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="novoUsuario.resx">
+      <DependentUpon>novoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recuperar_Senha.resx">
+      <DependentUpon>Recuperar_Senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REVER_COD_SEGURANCA.resx">
+      <DependentUpon>REVER_COD_SEGURANCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaCadGenero.resx">
+      <DependentUpon>telaCadGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaCadIdioma.resx">
+      <DependentUpon>telaCadIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaCadTipoAcervo.resx">
+      <DependentUpon>telaCadTipoAcervo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaCadAutor.resx">
+      <DependentUpon>telaCadAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaCadEditora.resx">
+      <DependentUpon>telaCadEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaLogin.resx">
+      <DependentUpon>telaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaPrincipal.resx">
+      <DependentUpon>telaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICO 128x128.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

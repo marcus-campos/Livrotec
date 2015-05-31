@@ -1,0 +1,23 @@
+Esta quase tudo funcionando esta apenas faltando os inserts do Acervo, Editora, emprestimo
+
+-Todas as funções aprimoradas
+-Performance aumentada, 
+-implementado sistema de criptografia de senhas,
+-Sistema de verificação caso n tenha nenhum usuario cadastrado cadastra automaticamente 1 novo usuario chamado de admin com a senha livrotec
+-Remodelamento de algumas telas
+
+Status:
+[01/11/2011] Aguardando que o Rodrigo entre no skype para me explicar algumas coisas sobre o Banco de dados.
+
+[05/11/2011] Reiniciado todas as operações com a ajuda do Irving.
+-Não foi obtida nenhuma resposta do Rodrigo até agora.
+-Consto por meio deste que o integrante do grupo Renato não participou de nunhuma atividade relacionada ao trabalho.Vale resaltar que ele foi em 2 reuniões. Fica ao critério de todos participantes do grupo como ele ficarrá mediante ao relatório a ser emitido pelo lider (Rodrigo).
+
+[06/11/2011] Ainda é nescecitada a progamação da aba Acervo ( muitos erros estão presentes na mesma ).
+-ComboBox de emprestimo nescecita ser progamada.
+-Sistema de emprestimo precisa ser progamado.
+-TabIndex corrigidas e testadas ( funcionando corretamente ).
+-Consto por meio deste que o integrante do grupo Bernardo não particiou das atividades do grupo, e mesmo sendo solicitado no domingo (06/11/20111) ainda não compareceu (17:13).
+
+[06/11/2011] (Rodrigo)
+- o campo de senha e confirmar senha tem q ser com ***** na hora de cadastrar um novo usuário.

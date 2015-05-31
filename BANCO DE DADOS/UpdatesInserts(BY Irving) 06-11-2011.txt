@@ -1,0 +1,78 @@
+UPDATE EDITORA:
+
+string sql = "UPDATE tbl_editora set razao_social = '" + tb_editora_razaoSocial.Text + "', nome_fantasia = '" + tb_editora_nomeFantasia.Text + "', cnpj = '" + msk_editora_cnpj.Text + "', site = '" + tb_editora_site.Text + "', contato = '" + tb_editora_contato.Text + "', email = '" + tb_editora_email.Text + "', telefone = '" + tb_editora_telefonePrincipal.Text + "', fax = '" + tb_editora_FAX.Text + "', cep = '" + tb_editora_cep.Text + "', logradouro = '" + tb_editora_logradouro.Text + "', cidade = '" + tb_editora_cidade.Text + "', bairro = '" + tb_editora_bairro.Text + "', numero = '" + tb_editora_numero.Text + "', complemento = '" + tb_editora_complemento + "', uf = '" + cb_editora_UF.Text + "' WHERE cod_editora = '" + dg_editora_pesquisa.SelectedRows[0].Cells[0].Value.ToString() + "';";
+
+DELETE EDITORA:
+
+string sql = "DELETE FROM tbl_editora WHERE cod_editora = '" + dg_editora_pesquisa.SelectedRows[0].Cells[0].Value.ToString() + "';";
+
+INSERT LEITORES:
+
+     string rg = "";
+            string cpf = "";
+            rg = msk_leitores_rg.Text;
+            cpf = msk_leitores_cpf.Text;
+            rg.Replace(',', '.');
+            cpf.Replace(',', '.');
+            string sexo = "";
+            if (rb_leitores_masculino.Checked == true)
+            {
+                sexo = "M";
+            }
+            if (rb_leitores_feminino.Checked == true)
+            {
+                sexo = "F";
+            }
+
+            string sql = "INSERT into tbl_cliente values('','" + tb_leitores_nomeLeitor.Text + "','" + rg + "','" + cpf + "','" + dt_leitores_dataNascimento.Value.ToString("yyyy-MM-dd") + "','" + dt_leitores_dataCadastro.Value.ToString("yyyy-MM-dd") + "','" + sexo + "','" + tb_leitores_responsavel.Text + "','" + tb_leitores_observacoes.Text + "','" + tb_leitores_matricula.Text + "','" + tb_leitores_turma.Text + "','" + tb_leitores_periodo.Text + "','"+ tb_leitores_multa.Text +"','" + tb_leitores_email.Text + "','" + tb_leitores_cep.Text + "','" + tb_leitores_logradouro.Text + "','" + tb_leitores_cidade.Text + "','" + tb_leitores_bairro.Text + "','" + tb_leitores_numero.Text + "','" + tb_leitores_complemento.Text + "','" + cb_leitores_uf.Text + "','" + tb_leitores_residencial.Text + "','" + tb_leitores_celular.Text + "');";
+
+UPDATE LEITORES:
+
+                       string sexo = "";
+            if (rb_leitores_masculino.Checked == true)
+            {
+                sexo = "M";
+            }
+            if (rb_leitores_feminino.Checked == true)
+            {
+                sexo = "F";
+            }
+            string sql = "UPDATE tbl_cliente set cliente = '" + tb_leitores_nomeLeitor.Text + "', rg = '" + mk_leitores_rg.Text + "', cpf = '" + mk_leitores_cpf.Text + "', dt_nascimento = '" + dt_leitores_dataNascimento.Value.ToString("yyyy-MM-dd") + "', dt_cadastro = '" + dt_leitores_dataCadastro.Value.ToString("yyyy-MM-dd") + "', sexo = '" + sexo + "', responsavel = '" + tb_leitores_responsavel.Text + "', observacao = '" + tb_leitores_obseracoes.Text + "', matricula = '" + tb_leitores_matricula.Text + "', turma = '" + tb_leitores_turma.Text + "', periodo = '" + tb_leitores_periodo.Text + "', multa = '" + tb_leitores_multa.Text + "', email = '" + tb_leitores_email.Text + "', cep = '" + tb_leitores_cep.Text + "', logradouro = '" + tb_leitores_logradouro.Text + "', cidade = '" + tb_leitores_cidade.Text + "', bairro = '" + tb_leitores_bairro.Text + "', numero = '" + tb_leitores_numero.Text + "', complemento = '" + tb_leitores_complemento.Text + "', uf = '" + cb_leitores_uf.Text + "', telefone = '" + tb_leitores_telefoneResidencial.Text + "', celular = '" + tb_leitores_telefoneCelular.Text + "' WHERE cod_leitor = '" + dg_leitores_pesquisa.SelectedRows[0].Cells[0].Value.ToString() + "';";
+
+DELETE LEITORES:
+
+string sql = "DELETE FROM tbl_cliente WHERE cod_leitor = '" + dg_leitores_pesquisa.SelectedRows[0].Cells[0].Value.ToString() + "';";
+
+INSERT ACERVO:
+
+            string statusAcervo = "";
+            if ( rb_acervo_locado.Checked == true )
+            {
+                statusAcervo = "Locado";
+            }
+            if ( rb_acervo_disponivel.Checked == true )
+            {
+                statusAcervo = "Disponivel";
+            }
+		string sql = "Insert into tbl_acervo values (''," + cb_acervo_autor.SelectedValue.ToString() + "," + cb_acervo_genero.SelectedValue.ToString() + "," + cb_acervo_tipoDeAcervo.SelectedValue.ToString() + "," + cb_acervo_idioma.SelectedValue.ToString() + "," + cb_acervo_editora.SelectedValue.ToString() + ",'" + tb_acervo_titulo.Text + "','" + tb_acervo_subTitulo.Text + "','" + dtp_acervo_dataAquisicao.Value.ToString("yyyy-MM-dd") + "','" + tb_acervo_exemplar.Text + "','" + tb_acervo_volume.Text + "','" + tb_acervo_edicao + "','" + dtp_acervo_dataEdicao.Value.ToString("yyyy-MM-dd") + "','" + tb_acervo_observacoes.Text + "'," + tb_acervo_numPaginas.Text + "," + tb_acervo_preco.Text + ",'" + tb_acervo_cdd.Text + "','" + tb_acervo_cdu.Text + "','" + tb_acervo_cutter.Text + "','" + tb_acervo_isbn.Text + "','" + statusAcervo + "','" + tb_acervo_refBibliografica.Text + "','" + tb_acervo_resenha.Text + "','" + cb_acervo_periodicidade.Text + "','" + tb_acervo_codBarra.Text + "');";
+        
+UPDATE ACERVO:
+
+                        string statusAcervo = "";
+            if ( rb_acervo_locado.Checked == true )
+            {
+                statusAcervo = "Locado";
+            }
+            if ( rb_acervo_disponivel.Checked == true )
+            {
+                statusAcervo = "Disponivel";
+            }
+            string sql = "UPDATE tbl_acervo SET tbl_autor_cod_autor = '" + cb_acervo_autor.Text + "', tbl_genero_cod_genero = '" + cb_acervo_genero.Text + "', tbl_tipo_acervo_cod_tipo_acervo = '" + cb_acervo_tipoDeAcervo.Text + "', tbl_idioma_cod_idioma = '" + cb_acervo_idioma.Text + "', tbl_editora_cod_editora = '" + cb_acervo_editora.Text + "', titulo = '" + tb_acervo_titulo.Text + "', sub_titulo = '" + tb_acervo_subTitulo.Text + "', data_aquisicao = '" + dtp_acervo_dataAquisicao.Value.ToString("yyyy-MM-dd") + "', exemplar = '" + tb_acervo_exemplar.Text + "', volume = '" + tb_acervo_volume.Text + "', edicao = '" + tb_acervo_edicao.Text + "', data_edicao = '" + dtp_acervo_dataEdicao.Value.ToString("yyyy-MM-dd") + "', observacoes = '" + tb_acervo_observacoes.Text + "', numero_paginas = '" + tb_acervo_numPaginas.Text + "', preco = '" + tb_acervo_preco.Text + "', cdd = '" + tb_acervo_cdd.Text + "', cdu = '" + tb_acervo_cdu.Text + "', cutter = '" + tb_acervo_cutter.Text + "' isbn = '" + tb_acervo_isbn.Text + "', status_acervo = '" + statusAcervo + "', referencia_bibliografica = '" + tb_acervo_refBibliografica.Text + "', resenha = '" + tb_acervo_resenha.Text + "', periodicidade = '" + cb_acervo_periodicidade.Text + "', codigobarra = '" + tb_acervo_codBarra.Text + "' WHERE cod_acervo = '" + dg_acervo_pesquisa.SelectedRows[0].Cells[0].Value.ToString() + "';";
+
+DELETE ACERVO:
+
+string sql = "DELETE FROM tbl_acervo WHERE cod_acervo = '"+dg_acervo_pesquisa.SelectedRows[0].Cells[0].Value.ToString()+"';";
+
+INSERT DE EDITORA NA ABA ACERVO*:
+
+string sql = "INSERT INTO tbl_editora VALUES('','" + tb_editora.Text + "','" + tb_nomeFantasia.Text + "','" + msk_cnpj.Text + "','" + tb_site.Text + "','" + tb_contato.Text + "','" + tb_proficional.Text + "','" + tb_telefonePrincipal + "','" + tb_fax.Text + "','" + tb_cep.Text + "','" + tb_logradouro.Text + "','" + tb_cidade.Text + "','" + tb_bairro.Text + "','" + tb_numero.Text + "','" + tb_complemento.Text + "','" + cb_uf.Text + "');";

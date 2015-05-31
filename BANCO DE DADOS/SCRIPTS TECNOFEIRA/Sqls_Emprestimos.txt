@@ -1,0 +1,16 @@
+Sql para 2 cliques no dg_emprestimo_pendente:
+
+string sql = "UPDATE tbl_emprestimo SET estado = 'Devolvido' WHERE cod_emprestimo = '" + dg_emprestimos_pendente.SelectedRows[0].Cells[0].Value.ToString() + "' ;";
+
+Sql para carregar o dg_emprestimo_pendente:
+
+string sql = "SELECT * FROM tbl_emprestimo WHERE cod_emprestimo LIKE '%" + tb_emprestimos_pendente.Text + "%' AND estado = 'Pendente' ;";
+
+Sql para carregar o dg_emprestimo_historico:
+
+string sql = "SELECT * FROM tbl_emprestimo WHERE cod_emprestimo like '%" + tb_emprestimos_historico.Text + "%' AND estado = 'Devolvido';";
+
+Sql para 2 cliques no dg_emprestimo_pendente(atualizar status do acervo):
+
+string sql2 = "UPDATE tbl_acervo SET status_acervo = 'Disponivel' WHERE cod_acervo = '" + dg_emprestimos_pendente.SelectedRows[0].Cells[1].Value.ToString() + "' ; ";
+

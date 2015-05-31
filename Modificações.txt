@@ -1,0 +1,15 @@
+Marcão,
+
+Coloquei no DER o campo do código de barras, e já atualizei também o Físico.
+Coloquei eles com o nome iguam mas com o 2 no final.
+
+O programa eu fiz algumas coisas como:
+
+- Teclas de atalho ( F1~F9 ) abrindo as abas corretas.
+- Tecla de atalho ( ESC ) para fechar as abas abertas. <-- vê se ta correto
+- No cadastro de Acervo, do lado dos Combobox de "Gênero, Tipo de Acervo, Idioma...", a Carla me aconselhou a colocar o "+" para se a pessoa quiser cadastrar um deles enquanto cadastra um livro ter uma opção. Coloquei as telas ja abrindo e todas formatadas da forma correta, falta apenas programas o botão confirmar que tem q conectar ao banco.
+- No "Menu Strip" coloquei um Menu para a pessoa abrir as abas por ali também, mostrando quais são os atalhos.
+
+Qualquer dúvida pode me ligar ou mandar e-mail.
+
+flws!

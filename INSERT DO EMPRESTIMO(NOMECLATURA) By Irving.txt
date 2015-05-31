@@ -1,0 +1,10 @@
+            // NOS CODIGOS A SEGUIR, VOCÊ VAI BUSCAR O COD LEITOR E COD ACERVO EM SUAS RESPECTIVAS TABELAS ANTES DE SEREM USADAS
+            //Define a variavel cod_acervo
+            string sql = "SELECT cod_acervo FROM tbl_acervo WHERE titulo = '"+cb_emprestimos_nomeLivro.Text+"' AND exemplar = '"+cb_emprestimos_exemplarManual.Text+"' ;";
+            string cod_acervo = //Aki vc preenche a variavel com o Select do cod_acervo acima.
+            //Define a variavel cod_leitor
+            string sql = "SELECT cod_leitor FROM tbl_cliente WHERE cliente = '"+cb_emprestimo_leitor.Text+"' ;";
+            string cod_leitor = //aki vc preenche a variavel com o Select do cod_leitor acima.
+            //Define o tipo de acervo para calcular a data de entrega
+            string sql = "SELECT emprestimo FROM tbl_tipo_acervo JOIN tbl_acervo ON cod_tipo_acervo = tbl_tipo_acervo_cod_acervo WHERE tbl_acervo.titulo = '"+cb_emprestimos_nomeLivro.Text+"' ;";
+            string sql = "INSERT INTO tbl_emprestimo VALUES('','"+cod_acervo+"','"+cod_leitor+"','

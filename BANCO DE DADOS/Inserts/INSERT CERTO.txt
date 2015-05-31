@@ -1,0 +1,83 @@
+
+INSERT INTO `tbl_tipo_acervo` (`cod_tipo_acervo`, `tipo_acervo`, `emprestimo`) VALUES
+(1, 'Jornal', 2),
+(2, 'Revista', 5),
+(3, 'Livro', 5),
+(4, 'Virtual', 5),
+(5, 'Filme', 7);
+
+
+
+INSERT INTO `tbl_idioma` (`cod_idioma`, `idioma`) VALUES
+(1, 'Portugues'),
+(2, 'Ingles'),
+(3, 'Espanhol'),
+(4, 'Frances'),
+(5, 'Italiano');
+
+
+
+INSERT INTO `tbl_genero` (`cod_genero`, `genero`) VALUES
+(1, 'Porno'),
+(2, 'Romantico'),
+(3, 'Drama'),
+(4, 'Comedia'),
+(5, 'Comedia Romantica');
+
+
+
+
+INSERT INTO `tbl_autor` (`cod_autor`, `autor`) VALUES
+(1, 'Marcus Pinto Quintana'),
+(2, 'Rodolf Del Marques'),
+(3, 'Vitor Martinele Ariosa'),
+(4, 'Lindomar Wundos'),
+(5, 'Pedro Maia');
+
+
+
+
+INSERT INTO `tbl_cliente` (`cod_leitor`, `cliente`, `rg`, `cpf`, `dt_nascimento`, `dt_cadastro`, `sexo`, `responsavel`, `foto`, `observacao`, `matricula`, `turma`, `periodo`, `multa`, `email`) VALUES
+(1, 'Pedro Roberto', '403289440', 54832619926, '1990-10-07', '2011-10-29', 'M', NULL, NULL, NULL, 11000301, '2A1', 'V', NULL, 'pedrogo@hotmail.com');
+
+
+
+INSERT INTO `tbl_editora` (`cod_editora`, `razao_social`, `nome_fantasia`, `cnpj`, `site`, `contato`, `email`) VALUES
+(1, 'Fundor', 'LivroNice', 73090616000174, 'www.livronice.com', 'N/A', 'livronice@hotmail.com'),
+(2, 'Dorer', 'LivreCool', 73090616000171, 'www.livrocool.com', 'N/A', 'livrocool@hotmail.com'),
+(3, 'NecroNice', 'VerdanaWins', 73090616000177, 'www.verdana.com', 'N/A', 'verdana@livrodana.com'),
+(4, 'Quemana', 'Suelels Livro', 73090616000178, 'www.suele.com', 'N/A', 'suele@yahoo.com'),
+(5, 'ReedFox', 'FunderLivro', 73090616000179, 'www.funderlivre.com', 'N/A', 'funder@funder.com');
+
+
+
+
+
+INSERT INTO `tbl_endereco_editora` (`tbl_editora_cod_editora`, `cep`, `logradouro`, `cidade`, `bairro`, `numero`, `complemento`, `uf`) VALUES
+(2, 30789120, 'Rua Vinda', 'Belo Horizonte', 'Padre Miguel', 51, 'apt501', 'MG');
+
+
+
+INSERT INTO `tbl_endereco_leitor` (`tbl_cliente_cod_leitor`, `cep`, `logradouro`, `cidade`, `bairro`, `numero`, `complemento`, `uf`) VALUES
+(1, 30720180, NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+
+
+INSERT INTO `tbl_telefone_editora` (`tbl_editora_cod_editora`, `telefone`, `fax`) VALUES
+(1, 35648416, 32165487);
+
+
+
+INSERT INTO `tbl_telefone_leitor` (`tbl_cliente_cod_leitor`, `telefone`, `celular`) VALUES
+(1, 32165489, 99856325);
+
+
+
+
+INSERT INTO `tbl_acervo` (`cod_acervo`, `tbl_autor_cod_autor`, `tbl_genero_cod_genero`, `tbl_tipo_acervo_cod_tipo_acervo`, `tbl_idioma_cod_idioma`, `tbl_editora_cod_editora`, `titulo`, `sub_titulo`, `data_aquisicao`, `exemplar`, `volume`, `edicao`, `ano_edicao`, `foto`, `observacoes`, `numero_paginas`, `preco`, `cdd`, `cdu`, `cutter`, `isbn`, `status_acervo`, `referencia_bibliografica`, `resenha`, `periodicidade`, `codigobarra`) VALUES
+(1, 1, 1, 1, 1, 1, 'Jaoa e Maria', 'em um viajem ao inferno', '2011-10-29', '01', '01', '01', '2001-01-01', NULL, NULL, 500, 50, NULL, NULL, NULL, NULL, 'Alugado', NULL, NULL, NULL, NULL);
+
+
+
+

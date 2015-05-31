@@ -1,0 +1,52 @@
+
+DUPLO CLICK EDITORA:
+
+
+            tb_editora_razaoSocial.Text = dg_editora_pesquisa.SelectedRows[0].Cells[1].Value.ToString();
+            tb_editora_nomeFantasia.Text = dg_editora_pesquisa.SelectedRows[0].Cells[2].Value.ToString();
+            msk_editora_cnpj.Text = dg_editora_pesquisa.SelectedRows[0].Cells[3].Value.ToString();
+            tb_editora_site.Text = dg_editora_pesquisa.SelectedRows[0].Cells[4].Value.ToString();
+            tb_editora_contato.Text = dg_editora_pesquisa.SelectedRows[0].Cells[5].Value.ToString();
+            tb_editora_email.Text = dg_editora_pesquisa.SelectedRows[0].Cells[6].Value.ToString();
+            tb_editora_logradouro.Text = dg_editora_pesquisa.SelectedRows[0].Cells[10].Value.ToString();
+            tb_editora_numero.Text = dg_editora_pesquisa.SelectedRows[0].Cells[13].Value.ToString();
+            cb_editora_UF.Text = dg_editora_pesquisa.SelectedRows[0].Cells[15].Value.ToString();
+            tb_editora_cep.Text = dg_editora_pesquisa.SelectedRows[0].Cells[9].Value.ToString();
+            tb_editora_bairro.Text = dg_editora_pesquisa.SelectedRows[0].Cells[12].Value.ToString();
+            tb_editora_cidade.Text = dg_editora_pesquisa.SelectedRows[0].Cells[11].Value.ToString();
+            tb_editora_complemento.Text = dg_editora_pesquisa.SelectedRows[0].Cells[14].Value.ToString();
+            tb_editora_telefonePrincipal.Text = dg_editora_pesquisa.SelectedRows[0].Cells[7].Value.ToString();
+            tb_editora_FAX.Text = dg_editora_pesquisa.SelectedRows[0].Cells[8].Value.ToString();
+
+DUPLO CLICK LEITOR:
+
+            tb_leitores_multa.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[12].Value.ToString();
+            tb_leitores_matricula.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[9].Value.ToString();
+            tb_leitores_logradouro.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[15].Value.ToString();
+            tb_leitores_email.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[13].Value.ToString();
+            tb_leitores_complemento.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[19].Value.ToString();
+            tb_leitores_cidade.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[16].Value.ToString();
+            tb_leitores_cep.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[14].Value.ToString();
+            tb_leitores_celular.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[22].Value.ToString();
+            tb_leitores_bairro.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[17].Value.ToString();
+            tb_leitores_nomeLeitor.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[1].Value.ToString();
+            tb_leitores_numero.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[18].Value.ToString();
+            tb_leitores_observacoes.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[8].Value.ToString();
+            tb_leitores_periodo.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[11].Value.ToString();
+            tb_leitores_residencial.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[21].Value.ToString();
+            tb_leitores_responsavel.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[7].Value.ToString();
+            tb_leitores_turma.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[10].Value.ToString();
+            msk_leitores_cpf.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[3].Value.ToString();
+            msk_leitores_rg.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[2].Value.ToString();
+            dt_leitores_dataCadastro.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[5].Value.ToString();
+            dt_leitores_dataNascimento.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[4].Value.ToString();
+            cb_leitores_uf.Text = dg_leitores_pesquisa.SelectedRows[0].Cells[20].Value.ToString();
+
+            if (dg_leitores_pesquisa.SelectedRows[0].Cells[6].Value.ToString() == "M")
+            {
+                rb_leitores_masculino.Checked = true;
+            }
+            if (dg_leitores_pesquisa.SelectedRows[0].Cells[6].Value.ToString() == "F")
+            {
+                rb_leitores_feminino.Checked = true;
+            }

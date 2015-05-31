@@ -1,0 +1,32 @@
+O botão pesquisar da aba "Autores" não está executando a pesquisa corretamente qdo o "Campo Da Pesquisa" está marcado em "Codigo do Autor".( Acredito q vc esqueceu do .Text, isso aconteceu comigo, tenho quase certeza )
+Acho q o campo de pesquisas das tabelas menores ( Autores, Idioma, Editora, Genero e Usuário ) deveriam pesquisar somente ao pressionar o botão pesquisa ao invés de pesquisar a medida que o usuario vai digitando a palavra a ser pesquisada.
+Ao clicar no botão "Confirmar" da aba autores para alterar o nome do autor, recarregar as informações do data grid para dar mais usabilidade ao progama.
+Ao clicar no botão "Deletar" alem de deletar o campo selecionado, tambem exibir uma mensagem de confirmação(S/N) pois o usuario pode clicar sem kerer ( OBS, acredito que isso deva ser feito em todas as abas ).
+Ao clicar no botão "Deletar" tambem recarregar o datagrid para dar mais usabilidade ao progama.
+Ao tentar alterar um usuario do tipo "Comun / 0" o radio button "Comun" não vem preenchido.
+Acho que a opção de alterar o usuario de comun para administrador deve ser requerido que o usuario atual seja administrador
+O botão pesquisa da aba gênero não esta funcionando corretamente.
+Na aba tipo de acervo, ao selecionar "Codigo do tipo de acervo" no campo da pesquisa se eu n preencer nada no tb da pesquisa, não é retornado nenhum select.
+Na aba tipo de acervo, a pesquisa através do campo de pesquisa: "Nome do tipo de acervo" não esta funcionando apropriadamente.
+na aba tipo de acervo, a pesquisa através do campo de pesquisa: "Dias de emprestimo" não está funcionando apropriadamente.
+Ao clicar em confirmar para alterar na aba tipo de acervo, tambem recarregar o datagrid para dar mais usabilidade ao progama.
+Ao clicar no botão deletar da aba tipo de acervo tambem recarregar as informações do data grid para dar mais usabilidade ao progama.
+O botão Alterar da aba Idioma não está retornando os campos corretos.
+Ao clicar em confirmar para alterar o nome do idioma, automaticamente recarregar as informações do datagrid para dar mais usabilidade ao progama.
+Ao clicar em deletar para deletar um campo do datagrid, automaticamente recarregar o mesmo para dar mais usabilidade ao progama.
+Campo de pesquisa: "Codigo do Idioma", não esta funcionando apropriadamente na aba "idioma".
+
+
+OBS gerais: 
+
+Botões do tipo "Deletar" deveriam ter uma message box com confirmações para evitar possiveis problemas com usuarios leigos.
+Os campos de pesquisa não deveriam pesquisae ao se digitar algo, pelo que vi isso pode acabar gerando alguns bugs, acho q a pesquisa deveria ficar apenas no botão.
+
+
+O rodrigo vai depurar as ultimas abas(as abas maiores: Emprestimos, Acervo, leitores e Editora ) em casa, durante a noite,e vai te mandar msg ou te ligar para te informar dos bus( se existirem ).
+
+
+
+
+
+

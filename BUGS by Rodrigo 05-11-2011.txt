@@ -1,0 +1,37 @@
+--- Gêneros ---
+
+* O botão pesquisar do gênero não está funcionando.
+* O datagrid do gênero não está com o size maximo.( por exemplo quando eu cadastro um gênero com o nome maior, ele não "estica" mostrando o nome inteiro, ele fica com no final os "...")
+* O botão Novo, logo após cadastrar o gênero, não carrega denovo o datagrid.
+* O botão Confirmar,logo após alteraro gênero, não carrega denovo o datagrid.
+* Quando clica 2x em 1 item do datagrid, ele carrega o txtgenero la em baixo(nao sei se vai mudar ou dexar assim , vc q sabe)
+* Quando deleta um gênero, o pesquisa para de funfar
+
+
+--- Idiomas ---
+
+* O botão Novo, logo após cadastrar o idioma,não carrega denovo o datagrid.
+* O botão alterar não está carregando o txtidioma lá em baixo
+* Quando clica 2x em 1 item do datagrid, ele carrega o txtidioma la em baixo(nao sei se vai mudar ou dexar assim , vc q sabe)
+* Quando pesquisa pelo código do idioma, nao carrega nada no dg
+* 
+
+
+--- Usuário ---
+
+* Quando clica em alterar com um usuario comum selecionado, o radiobutton nao preenche.
+
+
+--- Tipo de Acervo ---
+
+* O botão Novo, logo após cadastrar o Tipo de acervo, não carrega denovo o datagrid.
+* O botão Confirmar,logo após alteraro Tipo de acervo, não carrega denovo o datagrid
+
+
+--- TELA PRINCIPAL ---
+
+O menu "Ajuda" e "Sobre" lá em cima, nao fazem nd
+
+
+
+QUALKER DUVIDA PODE ME MANDAR UMA MSG MESMO SE FOR DE MADRUGADA QUE ASSIM QUE EU VER TE RESPONDO, SE EU NAO ACORDAR A NOITE, DE MANHA EU TE RESPONDO
